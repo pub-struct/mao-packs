@@ -1,0 +1,30 @@
+name: check
+
+on:
+  pull_request:
+    paths: ["packs.toml", "packs/**", "scripts/**", ".github/workflows/check.yml"]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Base index
+        run: |
+          base="${{ github.event.pull_request.base.sha || github.event.before }}"
+          if [ -n "$base" ] && git cat-file -e "$base:packs.toml" 2>/dev/null; then
+            git show "$base:packs.toml" > "$RUNNER_TEMP/base-packs.toml"
+          fi
+      - name: Check packs.toml and fetch new entries
+        run: python3 -I scripts/check_index.py packs.toml "$RUNNER_TEMP/base-packs.toml" --fetch

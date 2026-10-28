@@ -1,0 +1,16 @@
+# The official MAO pack registry.
+#
+# One [[pack]] per version listed, each pinned to the exact commit of that version.
+# Add an entry by pull request (`mao pack publish <folder>` opens one for you).
+# See README.md for the rules.
+
+schema_version = 1
+
+# [[pack]]
+# id = "acme/review-team"
+# repo = "https://github.com/acme/mao-review-team"
+# path = "."
+# version = "1.2.0"
+# commit = "0123456789abcdef0123456789abcdef01234567"
+# title = "Review team"
+# description = "A reviewer and a tester, wired for pull requests."
