@@ -1,0 +1,5 @@
+name = "Explainer"
+preset = { kind = "claude_code" }
+role = "pub-struct/explainer"
+icon = "megaphone"
+color = "#a855f7"

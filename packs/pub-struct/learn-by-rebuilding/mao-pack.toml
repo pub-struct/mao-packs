@@ -1,0 +1,33 @@
+# Learn a concept by rebuilding it from scratch, explaining it out loud and shipping
+# both: the build, teach and ship loop, as three agents and the notes they share.
+id = "pub-struct/learn-by-rebuilding"
+name = "Learn by rebuilding"
+version = "1.0.0"
+description = """
+Pick one idea you use every day but cannot explain, rebuild the smallest version of it, \
+and teach it. A Builder writes the toy version, a Student tries to run and understand it, \
+and an Explainer turns what was learned into a lecture script and a post."""
+authors = ["MAO <hello@miguer.com>"]
+license = "Apache-2.0"
+repository = "https://github.com/pub-struct/mao-packs"
+tags = ["learning", "teaching", "from-scratch", "writing"]
+mao = ">=0.11"
+
+[[arrangement]]
+file = "arrangements/four-weekends.json"
+
+[[arrangement]]
+file = "arrangements/rebuild-sprint.json"
+
+[[input]]
+key = "concept"
+label = "Concept to rebuild"
+description = "One idea you use every day but cannot explain yet: attention, embeddings, RAG, an agent loop, backpropagation."
+default = "self-attention"
+required = true
+
+[[input]]
+key = "stack"
+label = "Language and allowed libraries"
+description = "What the toy version may be written in. Keep it small: the point is to see every moving part."
+default = "Python and NumPy, nothing else"

@@ -14,3 +14,12 @@ schema_version = 1
 # commit = "0123456789abcdef0123456789abcdef01234567"
 # title = "Review team"
 # description = "A reviewer and a tester, wired for pull requests."
+
+[[pack]]
+id = "pub-struct/learn-by-rebuilding"
+repo = "."
+path = "packs/pub-struct/learn-by-rebuilding"
+version = "1.0.0"
+commit = "ddedbc7d5fe069cbdbf36d4bf5f6bf8750dbdf1c"
+title = "Learn by rebuilding"
+description = "Learn one concept by rebuilding it from scratch: a Builder, a Student and an Explainer who turn it into a lecture and a post."
