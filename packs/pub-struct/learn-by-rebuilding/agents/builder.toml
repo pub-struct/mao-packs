@@ -1,0 +1,5 @@
+name = "Builder"
+preset = { kind = "claude_code" }
+role = "pub-struct/builder"
+icon = "wrench-screwdriver"
+color = "#f59e0b"

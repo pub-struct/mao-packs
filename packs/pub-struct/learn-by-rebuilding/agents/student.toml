@@ -1,0 +1,5 @@
+name = "Student"
+preset = { kind = "claude_code" }
+role = "pub-struct/student"
+icon = "question-mark-circle"
+color = "#22c55e"
